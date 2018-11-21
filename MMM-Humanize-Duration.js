@@ -38,13 +38,13 @@ Module.register("MMM-Humanize-Duration", {
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("div");
-		if (!this.config.start) {
-			wrapper.innerHTML = "Please set the start date.";
-			wrapper.className = "dimmed light small";
+		if (!this.config.date) {
+			wrapper.innerHTML = "Please set the date.";
+			wrapper.className = "dimmed small";
 			return wrapper;
 		}
 		wrapper.className = "small bold align-right"
-		var start = moment(this.config.start);
+		var start = moment(this.config.date);
 		var diff =  moment().diff(start)
 		var duration = humanizeDuration(diff, this.config.options)
 		wrapper.innerHTML = duration;
