@@ -4,14 +4,15 @@ This a module for the [MagicMirror](https://github.com/MichMich/MagicMirror).
 
 This module converts an interval into human readable units.
 
-##Motivation
+## Motivation
 I just had a baby, and I wanted a geeky way to keep track of his exact age, so...
 
 You can also use it to track any other past (or future) events!
 
 Underneath, it's just a simple wrapper around [HumanizeDuration.js](https://github.com/EvanHahn/HumanizeDuration.js)
 
-##Screenshots
+## Screenshot
+
 ![](screenshots/screenshot.png)
 
 ## Installation
