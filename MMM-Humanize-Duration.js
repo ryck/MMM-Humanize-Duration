@@ -13,8 +13,7 @@ Module.register("MMM-Humanize-Duration", {
 			round: true,
 			units: ["y", "mo", "w", "d"],
 			largest: 3,
-			conjunction: " and ",
-			serialComma: false
+			language: config.language
 		 },
 		debug: false
 	},

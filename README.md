@@ -25,7 +25,7 @@ The entry in `config.js` can include the following options:
 |Option|Description|
 |---|---|
 |`date`|A date to track.<br><br>**Type:** `string`|
-|`options`|[HumanizeDuration.js](https://github.com/EvanHahn/HumanizeDuration.js#options) options.<br><br>**Type:** `object`<br>**Default:** `{ round: true, units: ["y", "mo", "w", "d"], largest: 3, conjunction: " and ", serialComma: false }`
+|`options`|[HumanizeDuration.js](https://github.com/EvanHahn/HumanizeDuration.js#options) options.<br><br>**Type:** `object`<br>**Default:** `{ round: true, units: ["y", "mo", "w", "d"], largest: 3, language: config.language }`
 |`updateInterval `|How often the arrival information is updated.<br><br>**Type:** `integer`<br>**Default:** `1 min`|
 | `initialLoadDelay`           | The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds) <br><br>**Type:** `integer`<br>**Possible values:** `1000` - `5000` <br> **Default:**  `0`|
 | `animationSpeed`             | Speed of the update animation. (Milliseconds) <br><br>**Type:** `integer`<br>**Possible values:**`0` - `5000` <br> **Default:** `500` (2 seconds)|
@@ -45,13 +45,12 @@ Here is an example of an entry in `config.js`
 			units: ["y", "mo", "w", "d", "h", "m", "s"],
 			round: true,
 			largest: 5,
-			conjunction: ' and ',
-			serialComma: false
+			language: config.language
 		},
-		updateInterval: 1 * 1 * 1000,		
+		updateInterval: 1 * 1 * 1000,
 		animationSpeed: 250,
 		initialLoadDelay: 0,
-		debug: false			
+		debug: false
 	}
 },
 ```
