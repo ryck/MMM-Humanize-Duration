@@ -1,28 +1,28 @@
 {
-          "name": "MMM-Humanize-Duration",
-          "version": "1.0.0",
-          "description": "MagicMirror 2 module to convert an interval into human readable units.",
-          "repository": {
-                    "type": "git",
-                    "url": "git+https://github.com/ryck/MMM-Humanize-Duration"
-          },
-          "keywords": [
-                    "magic mirror",
-                    "smart mirror",
-                    "human",
-                    "duration",
-                    "age",
-                    "humanize-duration",
-                    "module"
-          ],
-          "author": "Ricardo Gonzalez",
-          "contributors": "https://github.com/ryck/MMM-Humanize-Duration/graphs/contributors",
-          "license": "MIT",
-          "bugs": {
-                    "url": "https://github.com/ryck/MMM-Humanize-Duration/issues"
-          },
-          "homepage": "https://github.com/ryck/MMM-Humanize-Duration#readme",
-          "dependencies": {
-                    "humanize-duration": "^3.15.3"
-          }
+  "name": "MMM-Humanize-Duration",
+  "version": "1.0.1",
+  "description": "MagicMirror 2 module to convert an interval into human readable units.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryck/MMM-Humanize-Duration"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "human",
+    "duration",
+    "age",
+    "humanize-duration",
+    "module"
+  ],
+  "author": "Ricardo Gonzalez",
+  "contributors": "https://github.com/ryck/MMM-Humanize-Duration/graphs/contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryck/MMM-Humanize-Duration/issues"
+  },
+  "homepage": "https://github.com/ryck/MMM-Humanize-Duration#readme",
+  "dependencies": {
+    "humanize-duration": "^3.18.0"
+  }
 }
