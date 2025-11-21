@@ -1,6 +1,6 @@
 {
 	"name": "mmm-humanize-duration",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "MagicMirror 2 module to convert an interval into human readable units.",
 	"repository": {
 		"type": "git",
@@ -16,7 +16,9 @@
 		"module"
 	],
 	"author": "Ricardo Gonzalez",
-	"contributors": "https://github.com/ryck/MMM-Humanize-Duration/graphs/contributors",
+	"contributors": [
+		"https://github.com/ryck/MMM-Humanize-Duration/graphs/contributors"
+	],
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/ryck/MMM-Humanize-Duration/issues"

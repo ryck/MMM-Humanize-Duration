@@ -33,22 +33,29 @@ Module.register("MMM-Humanize-Duration", {
 	},
 	//Define header for module.
 	getHeader: function () {
-		return this.data.header;
+		var configuredDate = this.config.date || this.config.data;
+		if (!configuredDate) {
+			return this.data.header;
+		}
+		var titleSpan = this.data.header?.length
+			? `<span class="mmm-humanize-duration-header-title">${this.data.header}</span>`
+			: "";
+		return `<div class="mmm-humanize-duration-header">${titleSpan}<span class="mmm-humanize-duration-header-date">${configuredDate}</span></div>`;
 	},
 	// Override dom generator.
 	getDom: function () {
 		var wrapper = document.createElement("div");
 		if (!this.config.date) {
 			wrapper.innerHTML = "Please set the date.";
-			wrapper.className = "dimmed small";
+			wrapper.className = "dimmed";
 			return wrapper;
 		}
 		if (!this.hasValidDate) {
 			wrapper.innerHTML = "Invalid date configured.";
-			wrapper.className = "dimmed small";
+			wrapper.className = "dimmed";
 			return wrapper;
 		}
-		wrapper.className = "small bold align-right";
+		wrapper.className = "bold align-right";
 		wrapper.innerHTML = this.formatDuration();
 		return wrapper;
 	},

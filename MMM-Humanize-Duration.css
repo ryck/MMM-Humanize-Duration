@@ -1,0 +1,11 @@
+.mmm-humanize-duration-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.mmm-humanize-duration-header-date {
+	margin-left: auto;
+	text-align: right;
+}
