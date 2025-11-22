@@ -14,6 +14,7 @@ Module.register("MMM-Humanize-Duration", {
 			units: ["y", "mo", "w", "d"],
 			largest: 3,
 		},
+		showDate: false,
 		debug: false,
 	},
 	start: function () {
@@ -33,14 +34,7 @@ Module.register("MMM-Humanize-Duration", {
 	},
 	//Define header for module.
 	getHeader: function () {
-		var configuredDate = this.config.date || this.config.data;
-		if (!configuredDate) {
-			return this.data.header;
-		}
-		var titleSpan = this.data.header?.length
-			? `<span class="mmm-humanize-duration-header-title">${this.data.header}</span>`
-			: "";
-		return `<div class="mmm-humanize-duration-header">${titleSpan}<span class="mmm-humanize-duration-header-date">${configuredDate}</span></div>`;
+		return this.data.header;
 	},
 	// Override dom generator.
 	getDom: function () {
@@ -55,8 +49,19 @@ Module.register("MMM-Humanize-Duration", {
 			wrapper.className = "dimmed";
 			return wrapper;
 		}
-		wrapper.className = "bold align-right";
-		wrapper.innerHTML = this.formatDuration();
+		wrapper.className = "mmm-humanize-duration";
+		if (this.config.showDate) {
+			const dateRow = document.createElement("div");
+			dateRow.className =
+				"mmm-humanize-duration-date xsmall dimmed align-right";
+			dateRow.innerHTML = this.config.date;
+			wrapper.appendChild(dateRow);
+		}
+		var durationRow = document.createElement("div");
+		durationRow.className =
+			"mmm-humanize-duration-value small bold align-right";
+		durationRow.innerHTML = this.formatDuration();
+		wrapper.appendChild(durationRow);
 		return wrapper;
 	},
 	scheduleUpdate: function (instant) {

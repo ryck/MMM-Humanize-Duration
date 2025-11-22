@@ -34,6 +34,7 @@ The entry in `config.js` can include the following options:
 | `initialLoadDelay` | The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds) <br><br>**Type:** `integer`<br>**Possible values:** `1000` - `5000` <br> **Default:** `0` |
 | `animationSpeed`   | Speed of the update animation. (Milliseconds) <br><br>**Type:** `integer`<br>**Possible values:**`0` - `5000` <br> **Default:** `500` (2 seconds)                                                                                               |
 | `debug`            | Show debug information. <br><br> **Possible values:** `true` or `false` <br> **Default:** `false`                                                                                                                                               |
+| `showDate`         | Display the configured `date` as a secondary line above the humanized duration. <br><br>**Type:** `boolean` <br> **Default:** `false`                                                                                                           |
 
 Here is an example of an entry in `config.js`
 
@@ -52,6 +53,7 @@ Here is an example of an entry in `config.js`
 		updateInterval: 1 * 1 * 1000,
 		animationSpeed: 250,
 		initialLoadDelay: 0,
+		showDate: true,
 		debug: false
 	}
 },
